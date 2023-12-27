@@ -80,6 +80,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 100px;
+  position: relative;
   
 }
 
@@ -89,6 +90,7 @@ body {
   padding: 15px 40px;
   display: inline-block;
   transition: all .2s ;
+ 
   
 }
 
@@ -102,6 +104,38 @@ body {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: white;
+}
+
+
+.btn:hover::after {
+  background-color: #fff;
+}
+
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 1s ease-out 2s;
+  animation-fill-mode: backwards; 
+}
 
 @keyframes moveInLeft {
   0% {
@@ -142,3 +176,18 @@ body {
 }
 
 
+@keyframes moveInBottom {
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+
+  }
+  
+  80%{
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0) ;
+  }
+}
