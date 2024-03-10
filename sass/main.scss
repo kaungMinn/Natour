@@ -7,12 +7,13 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/button";
+@import "components/composition";
+
 @import "layouts/header";
 @import "layouts/grid";
 
 @import "pages/home";
-
-@import "components/button";
 
 /* 
   inline elements are treated as text that is why text-aligh-center works !!!!!comments can also kill css haha*/
