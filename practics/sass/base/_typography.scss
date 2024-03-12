@@ -1,28 +1,30 @@
-body{
-    padding: 3rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: $color-gray-dark;
+body {
+  padding: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-gray-dark;
 }
 
-.heading-primary{
-    color: $color-white;
-    text-align: center;
-    text-transform: uppercase;
+.heading-primary {
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
 
-    &--main{
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out;
+  }
 
-    }
-
-    &--sub{
-        display: block;
-        font-size: 2rem;
-        font-weight: 400;
-        letter-spacing: 1.74rem;
-    }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out;
+  }
 }
