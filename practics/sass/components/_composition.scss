@@ -1,0 +1,27 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 55%;
+    position: absolute;
+    outline-offset: 2rem;
+
+    &__p1 {
+      top: -2rem;
+      left: 0;
+    }
+
+    &__p2 {
+      top: 2rem;
+      right: 0;
+    }
+
+    &__p3 {
+      top: 10rem;
+      left: 10rem;
+    }
+
+    &:hover {
+      border: 1rem solid $color-primary;
+    }
+  }
+}

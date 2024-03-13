@@ -8,6 +8,7 @@
     display: inline-block;
     transition: all 0.3s;
     position: relative;
+    font-size: $default-font-size;
   }
 
   &:hover {
@@ -34,6 +35,11 @@
     }
   }
 
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.5s;
+    animation-fill-mode: backwards;
+  }
+
   &::after {
     content: "";
     display: inline-block;
@@ -45,5 +51,25 @@
     left: 0;
     transition: all 0.3s;
     z-index: -1;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: $default-font-size;
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+    display: inline-block;
+    padding: 3px;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: 1rem 1rem 2rem rgba($color-black, 0.5);
+      transform: translateY(-2px);
+    }
   }
 }
