@@ -13,4 +13,13 @@
       margin-right: $gutter-horizontal;
     }
   }
+
+  .col-1-of-4 {
+    padding: 1rem;
+    width: calc((100% - #{$gutter-horizontal}* 3) / 4);
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
 }

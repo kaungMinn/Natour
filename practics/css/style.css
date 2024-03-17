@@ -158,18 +158,42 @@ body {
   .composition__photo {
     width: 55%;
     position: absolute;
-    outline-offset: 2rem; }
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    outline-offset: 1rem;
+    transition: all 0.2s;
+    border-radius: 2rem; }
     .composition__photo__p1 {
-      top: -2rem;
+      top: 0;
       left: 0; }
     .composition__photo__p2 {
-      top: 2rem;
+      top: 3rem;
       right: 0; }
     .composition__photo__p3 {
-      top: 10rem;
-      left: 10rem; }
+      right: 10rem;
+      top: 10rem; }
     .composition__photo:hover {
-      border: 1rem solid #55c57a; }
+      outline: 1rem solid rgba(85, 197, 122, 0.8);
+      z-index: 20;
+      transform: scale(1.1) translateY(1rem); }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 .header {
   height: 95vh;
@@ -204,8 +228,22 @@ body {
     float: left; }
     .row .col-1-of-2:not(:last-child) {
       margin-right: 6rem; }
+  .row .col-1-of-4 {
+    padding: 1rem;
+    width: calc((100% - 6rem* 3) / 4);
+    float: left; }
+    .row .col-1-of-4:not(:last-child) {
+      margin-right: 6rem; }
 
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
