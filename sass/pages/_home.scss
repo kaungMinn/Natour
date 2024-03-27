@@ -28,7 +28,10 @@
   margin-top: -10rem;
 }
 
-.section-stories {
+.section__stories {
+  position: relative;
   padding: 15rem 0;
-  background-color: $color-gray-light-1;
+
+  //when we add bg and video at the same time they collapse... haha funny
+  // background-color: $color-gray-light-1;
 }
