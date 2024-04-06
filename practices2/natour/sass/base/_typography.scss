@@ -10,12 +10,17 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
+  margin-bottom: 5.2rem;
 
   &--main {
     display: block;
     font-size: 6rem;
     letter-spacing: 3.5rem;
     font-weight: 400;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
 
   &--sub {
@@ -23,5 +28,40 @@ body {
     font-size: 2rem;
     letter-spacing: 1.74rem;
     font-weight: 400;
+
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
