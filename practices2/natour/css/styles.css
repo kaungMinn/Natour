@@ -263,6 +263,58 @@ body {
     font-size: 4rem;
     font-weight: 100; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.15;
+  z-index: -1; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.story {
+  font-size: 1.6rem;
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-1rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.3);
+    transition: all 0.5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    transform: translate(-50%, -10%);
+    opacity: 0;
+    transition: all 0.5s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
 .header {
   position: relative;
   height: 95vh;
@@ -325,3 +377,20 @@ body {
 
 .section-tours {
   margin-top: 20rem; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../../../../img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
