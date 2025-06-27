@@ -2,29 +2,24 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animation";
+@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
 @import "components/bg-video";
-@import "components/form";
 @import "components/button";
+@import "components/card";
 @import "components/composition";
 @import "components/feature-box";
-@import "components/card";
-@import "components/story";
+@import "components/form";
 @import "components/popup";
+@import "components/story";
 
-@import "layouts/header";
-@import "layouts/grid";
-@import "layouts/footer";
-@import "layouts/navigation";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
 
 @import "pages/home";
 
-/* 
-  inline elements are treated as text that is why text-aligh-center works !!!!!comments can also kill css haha*/
-
-/* 
-  transition ko initial state mr all lox htar >> arr lone thet yourk */
